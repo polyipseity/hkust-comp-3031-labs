@@ -96,7 +96,7 @@ hs_err_pid*
 *.DS_Store
 *.swp
 *~
-*.class
+# *.class
 *.tasty
 target/
 logs/
@@ -109,5 +109,5 @@ logs/
 .vscode
 *.csv
 *.dat
-.bsp
+# .bsp
 # }
