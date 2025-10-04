@@ -54,7 +54,7 @@ object Recursion:
    */
   def countChange(money: Int, coins: List[Int]): Int =
     val coinsMap = coins.groupMapReduce(identity)(Function.const(1))(_ + _)
-      .view.mapValues(Function.const(Math.ceilDivExact(money, coins.min))).toMap // `coins` are assumed unlimited in tests
+      .view.mapValues(Function.const(money / coins.min)).toMap // `coins` are assumed unlimited in tests
 
     @tailrec
     def impl(
