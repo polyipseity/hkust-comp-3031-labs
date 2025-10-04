@@ -6,6 +6,7 @@ package lab2
  * To run this test suite, start "sbt" then run the "test" command.
  */
 class FunSetSuite extends munit.FunSuite:
+
   import FunSets.*
 
   test("contains is implemented"):
@@ -19,7 +20,7 @@ class FunSetSuite extends munit.FunSuite:
    * Instead of copy-pasting the code for creating the set into every test, we can
    * store it in the test class using a val:
    *
-   *   val s1 = singletonSet(1)
+   * val s1 = singletonSet(1)
    *
    * However, what happens if the method "singletonSet" has a bug and crashes? Then
    * the test methods are not even executed, because creating an instance of the
@@ -31,11 +32,12 @@ class FunSetSuite extends munit.FunSuite:
    */
 
   trait TestSets:
-    val s1 = singletonSet(1)
-    val s2 = singletonSet(2)
-    val s3 = singletonSet(3)
+    val s1: FunSet = singletonSet(1)
+    val s2: FunSet = singletonSet(2)
+    val s3: FunSet = singletonSet(3)
 
-  test("singleton set one contains one"): 
+  test("singleton set one contains one"):
+
     /**
      * We create a new instance of the "TestSets" trait, this gives us access
      * to the values "s1" to "s3".
@@ -49,24 +51,25 @@ class FunSetSuite extends munit.FunSuite:
 
   test("union contains all elements of each set"):
     new TestSets:
-      val s = union(s1, s2)
+      val s: FunSet = union(s1, s2)
       assert(contains(s, 1), "Union 1")
       assert(contains(s, 2), "Union 2")
       assert(!contains(s, 3), "Union 3")
 
   test("intersect contains only elements both sets"):
     new TestSets:
-      val s = intersect(union(s1, s2), union(s2, s3))
+      val s: FunSet = intersect(union(s1, s2), union(s2, s3))
       assert(contains(s, 2), "Intersect 2")
       assert(!contains(s, 1), "Intersect 1")
       assert(!contains(s, 3), "Intersect 3")
 
   test("diff contains only elements in first set but not in second set"):
     new TestSets:
-      val s = diff(union(s1, s2), union(s2, s3))
+      val s: FunSet = diff(union(s1, s2), union(s2, s3))
       assert(contains(s, 1), "Diff 1")
       assert(!contains(s, 2), "Diff 2")
       assert(!contains(s, 3), "Diff 3")
 
   import scala.concurrent.duration.*
-  override val munitTimeout = 10.seconds
+
+  override val munitTimeout: Duration = 10.seconds
