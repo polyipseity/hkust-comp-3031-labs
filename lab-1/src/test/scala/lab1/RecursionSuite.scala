@@ -1,6 +1,7 @@
 package lab1
 
 class RecursionSuite extends munit.FunSuite:
+
   import Recursion.*
 
   // ------ balance tests -----------------------------------------------------
@@ -24,19 +25,19 @@ class RecursionSuite extends munit.FunSuite:
   // ------ countChange tests -------------------------------------------------
 
   test("countChange: example given in the guide") {
-    assertEquals(countChange(4,List(1,2)), 3)
+    assertEquals(countChange(4, List(1, 2)), 3)
   }
 
   test("countChange: sorted HKD") {
-    assertEquals(countChange(300,List(5,10,20,50,100,200,500)), 1022)
+    assertEquals(countChange(300, List(5, 10, 20, 50, 100, 200, 500)), 1022)
   }
 
   test("countChange: no pennies") {
-    assertEquals(countChange(301,List(5,10,20,50,100,200,500)), 0)
+    assertEquals(countChange(301, List(5, 10, 20, 50, 100, 200, 500)), 0)
   }
 
   test("countChange: unsorted HKD") {
-    assertEquals(countChange(300,List(500,5,50,100,20,200,10)), 1022)
+    assertEquals(countChange(300, List(500, 5, 50, 100, 20, 200, 10)), 1022)
   }
 
   // ------ pascal tests ------------------------------------------------------
@@ -58,4 +59,5 @@ class RecursionSuite extends munit.FunSuite:
   }
 
   import scala.concurrent.duration.*
-  override val munitTimeout = 10.seconds
+
+  override val munitTimeout: Duration = 10.seconds
