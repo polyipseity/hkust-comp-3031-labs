@@ -21,7 +21,8 @@ class ListsSuite extends munit.FunSuite:
   }
 
   test("one plus one is three?") {
-    assert(1 + 1 == 3) // This assertion fails! Go ahead and fix it.
+    // assert(1 + 1 == 3) // This assertion fails! Go ahead and fix it.
+    assert(1 + 2 == 3)
   }
 
   /**
@@ -57,7 +58,8 @@ class ListsSuite extends munit.FunSuite:
    * when writing tests.
    */
   test("details why one plus one is not three") {
-    assertEquals(1 + 1, 3) // Fix me, please!
+    // assertEquals(1 + 1, 3) // Fix me, please!
+    assertEquals(1 + 2, 3)
   }
 
   /**
@@ -67,23 +69,24 @@ class ListsSuite extends munit.FunSuite:
    * In the following example, we test the fact that the method `intNotZero`
    * throws an `IllegalArgumentException` if its argument is `0`.
    */
-   test("intNotZero throws an exception if its argument is 0") {
-     try
-       intNotZero(0)
-       fail("No exception has been thrown")
-     catch
-       case e: IllegalArgumentException => ()
-   }
+  test("intNotZero throws an exception if its argument is 0") {
+    try
+      intNotZero(0)
+      fail("No exception has been thrown")
+    catch
+      case e: IllegalArgumentException => ()
+  }
 
-   def intNotZero(x: Int): Int =
-     if x == 0 then throw IllegalArgumentException("zero is not allowed")
-     else x
+  def intNotZero(x: Int): Int =
+    if x == 0 then throw IllegalArgumentException("zero is not allowed")
+    else x
 
   /**
    * Now we finally write some tests for the list functions that have to be
    * implemented for this assignment. We fist import all members of the
    * `List` object.
    */
+
   import Lists.*
 
 
@@ -107,4 +110,5 @@ class ListsSuite extends munit.FunSuite:
   }
 
   import scala.concurrent.duration.*
-  override val munitTimeout = 1.seconds
+
+  override val munitTimeout: Duration = 1.seconds

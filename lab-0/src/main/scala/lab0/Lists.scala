@@ -1,5 +1,7 @@
 package lab0
 
+import scala.annotation.tailrec
+
 object Lists:
 
   /**
@@ -16,13 +18,20 @@ object Lists:
    *  - `xs.tail: List[Int]` returns the tail of the list `xs`, i.e. the the
    *    list `xs` without its `head` element
    *
-   *  ''Hint:'' instead of writing a `for` or `while` loop, think of a recursive
-   *  solution.
+   * ''Hint:'' instead of writing a `for` or `while` loop, think of a recursive
+   * solution.
    *
    * @param xs A list of natural numbers
    * @return The sum of all elements in `xs`
    */
-  def sum(xs: List[Int]): Int = ???
+  def sum(xs: List[Int]): Int =
+    @tailrec
+    def impl(ret: Int, xs: List[Int]): Int = xs match {
+      case ::(head, next) => impl(ret + head, next)
+      case Nil => ret
+    }
+
+    impl(0, xs)
 
   /**
    * This method returns the largest element in a list of integers. If the
@@ -37,4 +46,14 @@ object Lists:
    * @return The largest element in `xs`
    * @throws java.util.NoSuchElementException if `xs` is an empty list
    */
-  def max(xs: List[Int]): Int = ???
+  def max(xs: List[Int]): Int = xs match {
+    case ::(head, next) =>
+      @tailrec
+      def impl(ret: Int, xs: List[Int]): Int = xs match {
+        case ::(head, next) => impl(if head > ret then head else ret, next)
+        case Nil => ret
+      }
+
+      impl(head, next)
+    case Nil => throw new NoSuchElementException
+  }
