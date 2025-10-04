@@ -2,6 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/exercise-1/.idea/modules/exercise-1/exercise-1.iml" filepath="$PROJECT_DIR$/exercise-1/.idea/modules/exercise-1/exercise-1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/exercise-1/.idea/modules/exercise-1/exercise-1.exercise-1-build.iml" filepath="$PROJECT_DIR$/exercise-1/.idea/modules/exercise-1/exercise-1.exercise-1-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/exercise-1/.idea/modules/exercise-1/exercise-1.main.iml" filepath="$PROJECT_DIR$/exercise-1/.idea/modules/exercise-1/exercise-1.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/exercise-1/.idea/modules/exercise-1/exercise-1.test.iml" filepath="$PROJECT_DIR$/exercise-1/.idea/modules/exercise-1/exercise-1.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/hkust-comp-3031-labs.iml" filepath="$PROJECT_DIR$/.idea/hkust-comp-3031-labs.iml" />
       <module fileurl="file://$PROJECT_DIR$/lab-0/.idea/modules/lab-0/lab-0.iml" filepath="$PROJECT_DIR$/lab-0/.idea/modules/lab-0/lab-0.iml" />
       <module fileurl="file://$PROJECT_DIR$/lab-0/.idea/modules/lab-0/lab-0.lab-0-build.iml" filepath="$PROJECT_DIR$/lab-0/.idea/modules/lab-0/lab-0.lab-0-build.iml" />
