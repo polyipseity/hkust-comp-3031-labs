@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ScalaCompilerConfiguration">
     <option name="separateProdTestSources" value="true" />
-    <profile name="sbt 1" modules="exercise-1,lab-0,lab-1" />
-    <profile name="sbt 2" modules="exercise-1.main,exercise-1.test,lab-0.main,lab-0.test,lab-1.main,lab-1.test">
+    <profile name="sbt 1" modules="exercise-1,lab-0,lab-1,lab-2x" />
+    <profile name="sbt 2" modules="exercise-1.main,exercise-1.test,lab-0.main,lab-0.test,lab-1.main,lab-1.test,lab-2x.main,lab-2x.test">
       <option name="implicitConversions" value="true" />
       <option name="deprecationWarnings" value="true" />
     </profile>

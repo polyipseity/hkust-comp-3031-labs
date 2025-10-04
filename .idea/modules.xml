@@ -15,6 +15,10 @@
       <module fileurl="file://$PROJECT_DIR$/lab-1/.idea/modules/lab-1/lab-1.lab-1-build.iml" filepath="$PROJECT_DIR$/lab-1/.idea/modules/lab-1/lab-1.lab-1-build.iml" />
       <module fileurl="file://$PROJECT_DIR$/lab-1/.idea/modules/lab-1/lab-1.main.iml" filepath="$PROJECT_DIR$/lab-1/.idea/modules/lab-1/lab-1.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/lab-1/.idea/modules/lab-1/lab-1.test.iml" filepath="$PROJECT_DIR$/lab-1/.idea/modules/lab-1/lab-1.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lab-2x/.idea/modules/lab-2x/lab-2x.iml" filepath="$PROJECT_DIR$/lab-2x/.idea/modules/lab-2x/lab-2x.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lab-2x/.idea/modules/lab-2x/lab-2x.lab-2x-build.iml" filepath="$PROJECT_DIR$/lab-2x/.idea/modules/lab-2x/lab-2x.lab-2x-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lab-2x/.idea/modules/lab-2x/lab-2x.main.iml" filepath="$PROJECT_DIR$/lab-2x/.idea/modules/lab-2x/lab-2x.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lab-2x/.idea/modules/lab-2x/lab-2x.test.iml" filepath="$PROJECT_DIR$/lab-2x/.idea/modules/lab-2x/lab-2x.test.iml" />
     </modules>
   </component>
 </project>
