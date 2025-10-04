@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ScalaCompilerConfiguration">
+    <option name="separateProdTestSources" value="true" />
+    <profile name="sbt 1" modules="lab-0" />
+    <profile name="sbt 2" modules="lab-0.main,lab-0.test">
+      <option name="implicitConversions" value="true" />
+      <option name="deprecationWarnings" value="true" />
+    </profile>
+  </component>
+</project>

@@ -91,3 +91,23 @@ http-client.private.env.json
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 # }
+
+# custom {
+*.DS_Store
+*.swp
+*~
+*.class
+*.tasty
+target/
+logs/
+.bloop
+.bsp
+.dotty-ide-artifact
+.dotty-ide.json
+.idea
+.metals
+.vscode
+*.csv
+*.dat
+.bsp
+# }
