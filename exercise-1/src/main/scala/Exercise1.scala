@@ -1,4 +1,4 @@
-// COMP3031Exercises.scala
+// Exercise1.scala
 //
 // A single Scala 3 source that implements every exercise in the PDF.
 // It contains all required functions, helpers, and a generic binary‑search tree.
