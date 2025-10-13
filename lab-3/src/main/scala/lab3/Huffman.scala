@@ -164,9 +164,12 @@ trait Huffman extends HuffmanInterface:
             case 0 => impl(left, next, ret)
             case 1 => impl(right, next, ret)
           }
-          case Leaf(char, weight) => impl(tree, next, char :: ret)
+          case Leaf(char, weight) => impl(tree, head :: next, char :: ret)
         }
-        case Nil => if currentTree eq tree then ret.reverse else throw IllegalArgumentException(bits.mkString)
+        case Nil => currentTree match {
+          case Fork(left, right, chars, weight) => throw IllegalArgumentException()
+          case Leaf(char, weight) => (char :: ret).reverse
+        }
       }
 
     impl(tree, bits, Nil)
@@ -205,13 +208,13 @@ trait Huffman extends HuffmanInterface:
           if Huffman.chars(left).contains(char)
           then encodeChar(left, char, 0 :: ret)
           else encodeChar(right, char, 1 :: ret)
-        case Leaf(charLeaf, weight) => if char == charLeaf then ret else throw IllegalArgumentException()
+        case Leaf(charLeaf, weight) => if char == charLeaf then ret.reverse else throw IllegalArgumentException()
       }
 
     @tailrec
     def impl(text: List[Char], ret: List[Bit]): List[Bit] =
       text match {
-        case head :: next => impl(text, encodeChar(tree, head, Nil) ::: ret)
+        case head :: next => impl(next, ret ::: encodeChar(tree, head, Nil))
         case Nil => ret
       }
 
@@ -262,7 +265,7 @@ trait Huffman extends HuffmanInterface:
     @tailrec
     def impl(text: List[Char], ret: List[Bit]): List[Bit] =
       text match {
-        case head :: next => impl(text, codeBits(table)(head) ::: ret)
+        case head :: next => impl(next, ret ::: codeBits(table)(head))
         case Nil => ret
       }
 
