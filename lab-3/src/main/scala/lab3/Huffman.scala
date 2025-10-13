@@ -183,7 +183,7 @@ trait Huffman extends HuffmanInterface:
 
   /**
    * What does the secret message say? Can you decode it?
-   * For the decoding use the `frenchCode' Huffman tree defined above.
+   * For the decoding use the `frenchCode` Huffman tree defined above.
    */
   val secret: List[Bit] = List(0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 0, 1, 1, 0, 1, 0, 0, 1, 1, 0, 1, 0, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1)
 
@@ -202,20 +202,20 @@ trait Huffman extends HuffmanInterface:
    */
   def encode(tree: CodeTree)(text: List[Char]): List[Bit] =
     @tailrec
-    def encodeChar(tree: CodeTree, char: Char, ret: List[Bit]): List[Bit] =
+    def encodeCharReversed(tree: CodeTree, char: Char, ret: List[Bit]): List[Bit] =
       tree match {
         case Fork(left, right, chars, weight) =>
           if Huffman.chars(left).contains(char)
-          then encodeChar(left, char, 0 :: ret)
-          else encodeChar(right, char, 1 :: ret)
-        case Leaf(charLeaf, weight) => if char == charLeaf then ret.reverse else throw IllegalArgumentException()
+          then encodeCharReversed(left, char, 0 :: ret)
+          else encodeCharReversed(right, char, 1 :: ret)
+        case Leaf(charLeaf, weight) => if char == charLeaf then ret else throw IllegalArgumentException()
       }
 
     @tailrec
     def impl(text: List[Char], ret: List[Bit]): List[Bit] =
       text match {
-        case head :: next => impl(next, ret ::: encodeChar(tree, head, Nil))
-        case Nil => ret
+        case head :: next => impl(next, encodeCharReversed(tree, head, Nil) ::: ret)
+        case Nil => ret.reverse
       }
 
     impl(text, Nil)
