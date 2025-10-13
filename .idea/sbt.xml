@@ -57,6 +57,17 @@
         </option>
         <option name="sbtVersion" value="1.10.1" />
       </SbtProjectSettings>
+      <SbtProjectSettings>
+        <option name="converterVersion" value="2" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/lab-3" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/lab-3" />
+            <option value="$PROJECT_DIR$/lab-3/project" />
+          </set>
+        </option>
+        <option name="sbtVersion" value="1.10.1" />
+      </SbtProjectSettings>
     </option>
   </component>
 </project>

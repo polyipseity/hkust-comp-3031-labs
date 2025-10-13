@@ -11,6 +11,8 @@
       <sourceFolder url="file://$MODULE_DIR$/../../../project" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/../../../project/project/target" />
       <excludeFolder url="file://$MODULE_DIR$/../../../project/target" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../project/.bloop" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../project/project/project/target" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
