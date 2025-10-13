@@ -1,11 +1,12 @@
 package lab3
 
 class HuffmanSuite extends munit.FunSuite:
+
   import Huffman.*
 
   trait TestTrees:
-    val t1 = Fork(Leaf('a',2), Leaf('b',3), List('a','b'), 5)
-    val t2 = Fork(Fork(Leaf('a',2), Leaf('b',3), List('a','b'), 5), Leaf('d',4), List('a','b','d'), 9)
+    val t1 = Fork(Leaf('a', 2), Leaf('b', 3), List('a', 'b'), 5)
+    val t2 = Fork(Fork(Leaf('a', 2), Leaf('b', 3), List('a', 'b'), 5), Leaf('d', 4), List('a', 'b', 'd'), 9)
 
     val text0 = "encoreuntextetressecret".toList
     val bits0 = List(1, 1, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1)
@@ -29,7 +30,7 @@ class HuffmanSuite extends munit.FunSuite:
 
   test("chars of a larger tree") {
     new TestTrees:
-      assertEquals(chars(t2), List('a','b','d'))
+      assertEquals(chars(t2), List('a', 'b', 'd'))
   }
 
   test("times of nil") {
@@ -37,7 +38,7 @@ class HuffmanSuite extends munit.FunSuite:
   }
 
   test("times of some word") {
-    assertEquals(times("abbrakkadabbrra".toList).sortWith((p1, p2) => p1._2 > p2._2), List(('a',5), ('b',4), ('r',3), ('k',2), ('d',1)))
+    assertEquals(times("abbrakkadabbrra".toList).sortWith((p1, p2) => p1._2 > p2._2), List(('a', 5), ('b', 4), ('r', 3), ('k', 2), ('d', 1)))
   }
 
   test("makeOrderedLeafList of nil") {
@@ -45,7 +46,7 @@ class HuffmanSuite extends munit.FunSuite:
   }
 
   test("make ordered leaf list for some frequency table") {
-    assertEquals(makeOrderedLeafList(List(('t', 2), ('e', 1), ('x', 3))), List(Leaf('e',1), Leaf('t',2), Leaf('x',3)))
+    assertEquals(makeOrderedLeafList(List(('t', 2), ('e', 1), ('x', 3))), List(Leaf('e', 1), Leaf('t', 2), Leaf('x', 3)))
   }
 
   test("singletons of Nil") {
@@ -63,7 +64,7 @@ class HuffmanSuite extends munit.FunSuite:
 
   test("combine of some leaf list") {
     val leaflist = List(Leaf('e', 1), Leaf('t', 2), Leaf('x', 4))
-    assertEquals(combine(leaflist), List(Fork(Leaf('e',1),Leaf('t',2),List('e', 't'),3), Leaf('x',4)))
+    assertEquals(combine(leaflist), List(Fork(Leaf('e', 1), Leaf('t', 2), List('e', 't'), 3), Leaf('x', 4)))
   }
 
   test("combine of a singleton or nil") {
@@ -115,7 +116,7 @@ class HuffmanSuite extends munit.FunSuite:
 
   test("convert: code table is created correctly") {
     new TestTrees:
-      assertEquals(convert(t2).sortWith((p1, p2) => p1._1 < p2._1), List(('a',List(0, 0)), ('b',List(0, 1)), ('d',List(1))))
+      assertEquals(convert(t2).sortWith((p1, p2) => p1._1 < p2._1), List(('a', List(0, 0)), ('b', List(0, 1)), ('d', List(1))))
   }
 
   test("quick encode gives the correct byte sequence") {
@@ -136,7 +137,9 @@ class HuffmanSuite extends munit.FunSuite:
       try
         instrumented.createCodeTree("hello".toList)
         fail(s"createCodeTree should be implemented in terms of $method")
-      catch { case e: OK => () }
+      catch {
+        case e: OK => ()
+      }
 
     throwsOK("times", new Huffman {
       override def times(chars: List[Char]): List[(Char, Int)] = throw OK()
@@ -160,4 +163,5 @@ class HuffmanSuite extends munit.FunSuite:
   }
 
   import scala.concurrent.duration.*
+
   override val munitTimeout = 10.seconds
