@@ -1,6 +1,7 @@
 package lab4
 
 class AnagramsSuite extends munit.FunSuite:
+
   import Anagrams.*
 
   test("wordOccurrences: abcd") {
@@ -87,4 +88,5 @@ class AnagramsSuite extends munit.FunSuite:
   }
 
   import scala.concurrent.duration.*
+
   override val munitTimeout = 10.seconds
