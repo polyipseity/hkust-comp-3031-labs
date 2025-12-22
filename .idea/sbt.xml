@@ -7,8 +7,8 @@
         <option name="externalProjectPath" value="$PROJECT_DIR$/exercise-1" />
         <option name="modules">
           <set>
-            <option value="$PROJECT_DIR$/exercise-1" />
-            <option value="$PROJECT_DIR$/exercise-1/project" />
+            <option value="D:\git\hkust-comp-3031-labs\exercise-1" />
+            <option value="D:\git\hkust-comp-3031-labs\exercise-1\project" />
           </set>
         </option>
         <option name="sbtVersion" value="1.11.4" />
@@ -18,8 +18,8 @@
         <option name="externalProjectPath" value="$PROJECT_DIR$/exercise-2" />
         <option name="modules">
           <set>
-            <option value="$PROJECT_DIR$/exercise-2" />
-            <option value="$PROJECT_DIR$/exercise-2/project" />
+            <option value="D:\git\hkust-comp-3031-labs\exercise-2" />
+            <option value="D:\git\hkust-comp-3031-labs\exercise-2\project" />
           </set>
         </option>
         <option name="sbtVersion" value="1.11.4" />
@@ -37,11 +37,22 @@
       </SbtProjectSettings>
       <SbtProjectSettings>
         <option name="converterVersion" value="2" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/exercise-4" />
+        <option name="modules">
+          <set>
+            <option value="D:\git\hkust-comp-3031-labs\exercise-4" />
+            <option value="D:\git\hkust-comp-3031-labs\exercise-4\project" />
+          </set>
+        </option>
+        <option name="sbtVersion" value="1.11.7" />
+      </SbtProjectSettings>
+      <SbtProjectSettings>
+        <option name="converterVersion" value="2" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/lab-0" />
         <option name="modules">
           <set>
-            <option value="$PROJECT_DIR$/lab-0" />
-            <option value="$PROJECT_DIR$/lab-0/project" />
+            <option value="D:\git\hkust-comp-3031-labs\lab-0" />
+            <option value="D:\git\hkust-comp-3031-labs\lab-0\project" />
           </set>
         </option>
         <option name="sbtVersion" value="1.10.1" />
@@ -51,8 +62,8 @@
         <option name="externalProjectPath" value="$PROJECT_DIR$/lab-1" />
         <option name="modules">
           <set>
-            <option value="$PROJECT_DIR$/lab-1" />
-            <option value="$PROJECT_DIR$/lab-1/project" />
+            <option value="D:\git\hkust-comp-3031-labs\lab-1" />
+            <option value="D:\git\hkust-comp-3031-labs\lab-1\project" />
           </set>
         </option>
         <option name="sbtVersion" value="1.10.1" />
@@ -62,8 +73,8 @@
         <option name="externalProjectPath" value="$PROJECT_DIR$/lab-2x" />
         <option name="modules">
           <set>
-            <option value="$PROJECT_DIR$/lab-2x" />
-            <option value="$PROJECT_DIR$/lab-2x/project" />
+            <option value="D:\git\hkust-comp-3031-labs\lab-2x" />
+            <option value="D:\git\hkust-comp-3031-labs\lab-2x\project" />
           </set>
         </option>
         <option name="sbtVersion" value="1.10.1" />
@@ -73,8 +84,8 @@
         <option name="externalProjectPath" value="$PROJECT_DIR$/lab-3" />
         <option name="modules">
           <set>
-            <option value="$PROJECT_DIR$/lab-3" />
-            <option value="$PROJECT_DIR$/lab-3/project" />
+            <option value="D:\git\hkust-comp-3031-labs\lab-3" />
+            <option value="D:\git\hkust-comp-3031-labs\lab-3\project" />
           </set>
         </option>
         <option name="sbtVersion" value="1.10.1" />
@@ -84,8 +95,8 @@
         <option name="externalProjectPath" value="$PROJECT_DIR$/lab-4" />
         <option name="modules">
           <set>
-            <option value="$PROJECT_DIR$/lab-4" />
-            <option value="$PROJECT_DIR$/lab-4/project" />
+            <option value="D:\git\hkust-comp-3031-labs\lab-4" />
+            <option value="D:\git\hkust-comp-3031-labs\lab-4\project" />
           </set>
         </option>
         <option name="sbtVersion" value="1.10.5" />
