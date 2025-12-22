@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module external.linked.project.id="lab-0:test [file:/D:/git/hkust-comp-3031-labs/lab-0/]" external.linked.project.path="$MODULE_DIR$/../../.." external.root.project.path="$MODULE_DIR$/../../.." external.system.id="SBT" external.system.module.type="sbtSourceSet" type="JAVA_MODULE" version="4">
+<module external.linked.project.id="lab-0:test [file:///D:/git/hkust-comp-3031-labs/lab-0/]" external.linked.project.path="D:\git\hkust-comp-3031-labs\lab-0" external.root.project.path="$MODULE_DIR$/../../.." external.system.id="SBT" external.system.module.type="sbtSourceSet" type="JAVA_MODULE" version="4">
   <component name="DisplayModuleName">
     <option name="name" value="lab-0.test" />
   </component>
-  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_22">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_25">
     <output-test url="file://$MODULE_DIR$/../../../target/scala-3.5.0/test-classes" />
     <exclude-output />
     <content url="file://$MODULE_DIR$/../../../src/test">

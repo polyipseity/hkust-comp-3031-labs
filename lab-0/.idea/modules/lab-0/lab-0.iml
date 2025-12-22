@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module external.linked.project.id="lab-0 [file:/D:/git/hkust-comp-3031-labs/lab-0/]" external.linked.project.path="$MODULE_DIR$/../../.." external.root.project.path="$MODULE_DIR$/../../.." external.system.id="SBT" type="JAVA_MODULE" version="4">
+<module external.linked.project.id="lab-0 [file:///D:/git/hkust-comp-3031-labs/lab-0/]" external.linked.project.path="D:\git\hkust-comp-3031-labs\lab-0" external.root.project.path="$MODULE_DIR$/../../.." external.system.id="SBT" type="JAVA_MODULE" version="4">
   <component name="DisplayModuleName">
     <option name="name" value="lab-0" />
   </component>
-  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_22" inherit-compiler-output="true">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_25" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$/../../..">
-      <excludeFolder url="file://$MODULE_DIR$/../../../.bloop" />
       <excludeFolder url="file://$MODULE_DIR$/../../../target" />
     </content>
     <orderEntry type="inheritedJdk" />
