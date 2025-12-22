@@ -1,3 +1,3 @@
-scalaVersion := "3.5.0"
-scalacOptions ++= Seq("-language:implicitConversions", "-deprecation")
-libraryDependencies += "org.scalameta" %% "munit" % "0.7.29" % Test
+scalaVersion := "3.7.3"
+scalacOptions ++= Seq("-deprecation", "-language:implicitConversions")
+libraryDependencies += "org.scalameta" %% "munit" % "1.2.1" % Test

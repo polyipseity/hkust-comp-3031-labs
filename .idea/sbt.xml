@@ -29,8 +29,8 @@
         <option name="externalProjectPath" value="$PROJECT_DIR$/exercise-3" />
         <option name="modules">
           <set>
-            <option value="$PROJECT_DIR$/exercise-3" />
-            <option value="$PROJECT_DIR$/exercise-3/project" />
+            <option value="D:\git\hkust-comp-3031-labs\exercise-3" />
+            <option value="D:\git\hkust-comp-3031-labs\exercise-3\project" />
           </set>
         </option>
         <option name="sbtVersion" value="1.11.4" />
