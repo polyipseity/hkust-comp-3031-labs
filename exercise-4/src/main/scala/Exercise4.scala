@@ -9,11 +9,7 @@ object Exercise4:
   // ---------------------------
 
   private enum BinOpName:
-    case Minus
-    case Plus
-    case Times
-    case LessEq
-    case Modulo
+    case Minus, Plus, Times, LessEq, Modulo
 
   private enum Expr:
     // Core expression AST
@@ -64,7 +60,7 @@ object Exercise4:
 
   // TODO: Implement the "gcd" binding as an Expr using the provided AST.
   // Replace ??? with a proper expression using Fun, IfNonzero, Call, modulo, etc.
-  private val gcdBinding: (String, Expr) = "gcd" -> ??? // TODO implement me
+  private val gcdBinding: (String, Expr) = "gcd" -> Fun("a", Fun("b", IfNonzero(Name("b"), Call(Call(Name("gcd"), Name("b")), modulo(Name("a"), Name("b"))), Name("a"))))
 
   // ---------------------------
   // Question 2: Lists, Map, FoldLeft
@@ -77,7 +73,7 @@ object Exercise4:
   //   case x :: xs => f(x) :: map(xs)(f)
 
   // TODO: Implement the "map" binding as an Expr using Match, Cons, EmptyList, Fun, Call.
-  private val mapBinding: (String, Expr) = "map" -> ??? // TODO implement me
+  private val mapBinding: (String, Expr) = "map" -> Fun("ls", Fun("f", Match(Name("ls"), EmptyList, "x", "xs", Cons(Call(Name("f"), Name("x")), Call(Call(Name("map"), Name("xs")), Name("f"))))))
 
   // FoldLeft:
   // Hint (Scala):
@@ -86,7 +82,7 @@ object Exercise4:
   //   case x :: xs => foldLeft(xs)(f(acc, x))(f)
 
   // TODO: Implement the "foldLeft" binding as an Expr using Match, Fun, Call, etc.
-  private val foldLeftBinding: (String, Expr) = "foldLeft" -> ??? // TODO implement me
+  private val foldLeftBinding: (String, Expr) = "foldLeft" -> Fun("ls", Fun("acc", Fun("f", Match(Name("ls"), Name("acc"), "x", "xs", Call(Call(Call(Name("foldLeft"), Name("xs")), Call(Call(Name("f"), Name("acc")), Name("x"))), Name("f"))))))
 
   // ---------------------------
   // Question 3: CAS (Compare-And-Swap)
@@ -103,7 +99,7 @@ object Exercise4:
   // NOTE: In this exercise language, use Read and Write forms to encode CAS semantics.
   // Read(idx) should be used to compare with `old`. Write(idx, nw, andThen) writes and then returns `andThen`.
   // TODO: Implement the "CAS" binding as an Expr using Fun, Read, Write, IfNonzero, etc.
-  private val casBinding: (String, Expr) = "CAS" -> ??? // TODO implement me
+  private val casBinding: (String, Expr) = "CAS" -> Fun("idx", Fun("old", Fun("nw", IfNonzero(minus(Read(Name("idx")), Name("old")), Constant(0), Write(Name("idx"), Name("nw"), Constant(1))))))
 
   // ---------------------------
   // Optional: aggregate global environment
@@ -111,8 +107,8 @@ object Exercise4:
 
   // You can include all top-level bindings in a global environment sequence.
   // All definitions can reference all names in this global environment.
-  private val globalEnv: Seq[(String, Expr)] = Seq(divBinding, gcdBinding, // TODO implemented by you
-    mapBinding, // TODO implemented by you
-    foldLeftBinding, // TODO implemented by you
-    casBinding // TODO implemented by you
+  private val globalEnv: Seq[(String, Expr)] = Seq(divBinding, gcdBinding, // implemented by you
+    mapBinding, // implemented by you
+    foldLeftBinding, // implemented by you
+    casBinding // implemented by you
   )
