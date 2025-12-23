@@ -101,6 +101,17 @@
         </option>
         <option name="sbtVersion" value="1.10.5" />
       </SbtProjectSettings>
+      <SbtProjectSettings>
+        <option name="converterVersion" value="2" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/lab-5" />
+        <option name="modules">
+          <set>
+            <option value="D:\git\hkust-comp-3031-labs\lab-5" />
+            <option value="D:\git\hkust-comp-3031-labs\lab-5\project" />
+          </set>
+        </option>
+        <option name="sbtVersion" value="1.10.5" />
+      </SbtProjectSettings>
     </option>
   </component>
 </project>
