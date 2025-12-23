@@ -21,7 +21,7 @@ trait GameDef:
    *   2 o # o o    # is at position Pos(2, 1)
    *   3 o o o o
    *
-   *   ^
+   *   &and;
    *   |
    *
    *   row axis
@@ -102,22 +102,22 @@ trait GameDef:
 
 
     /** The block obtained by moving left */
-    def left = if isStanding then             deltaCol(-2, -1)
+    def left: Block = if isStanding then             deltaCol(-2, -1)
                else if b1.row == b2.row then  deltaCol(-1, -2)
                else                        deltaCol(-1, -1)
 
     /** The block obtained by moving right */
-    def right = if isStanding then            deltaCol(1, 2)
+    def right: Block = if isStanding then            deltaCol(1, 2)
                 else if b1.row == b2.row then deltaCol(2, 1)
                 else                       deltaCol(1, 1)
 
     /** The block obtained by moving up */
-    def up = if isStanding then               deltaRow(-2, -1)
+    def up: Block = if isStanding then               deltaRow(-2, -1)
              else if b1.row == b2.row then    deltaRow(-1, -1)
              else                          deltaRow(-1, -2)
 
     /** The block obtained by moving down */
-    def down = if isStanding then             deltaRow(1, 2)
+    def down: Block = if isStanding then             deltaRow(1, 2)
                else if b1.row == b2.row then  deltaRow(1, 1)
                else                        deltaRow(2, 1)
 

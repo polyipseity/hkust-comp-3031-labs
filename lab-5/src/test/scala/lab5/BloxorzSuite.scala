@@ -1,7 +1,5 @@
 package lab5
 
-import Bloxorz.*
-
 class BloxorzSuite extends munit.FunSuite:
   trait SolutionChecker extends GameDef with Solver with StringParserTerrain:
     /**
