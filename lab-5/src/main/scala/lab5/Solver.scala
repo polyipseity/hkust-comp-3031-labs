@@ -62,9 +62,11 @@ trait Solver extends GameDef:
    * construct the correctly sorted lazy list.
    */
   def from(initial: LazyList[(Block, List[Move])],
-           explored: Set[Block]): LazyList[(Block, List[Move])] = {
-    val newNeighbors = newNeighborsOnly(initial.flatMap(neighborsWithHistory), explored)
-    newNeighbors #::: from(newNeighbors, explored ++ newNeighbors.map(_._1))
+           explored: Set[Block]): LazyList[(Block, List[Move])] = initial match {
+    case LazyList() => LazyList.empty
+    case _ #:: _ =>
+      val newNeighbors = newNeighborsOnly(initial.flatMap(neighborsWithHistory), explored)
+      newNeighbors #::: from(newNeighbors, explored ++ newNeighbors.map(_._1))
   }
 
   /**
