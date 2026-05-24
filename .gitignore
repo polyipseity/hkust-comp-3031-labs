@@ -1,4 +1,4 @@
-# https://github.com/github/gitignore/blob/fc6ce5da28a8c3480cc8a5acad050449f72a9261/Global/JetBrains.gitignore {
+# <https://github.com/github/gitignore/blob/fc6ce5da28a8c3480cc8a5acad050449f72a9261/Global/JetBrains.gitignore> {
 # Covers JetBrains IDEs: IntelliJ, GoLand, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio, WebStorm and Rider
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
@@ -84,7 +84,7 @@ http-client.private.env.json
 .idea/ApifoxUploaderProjectSetting.xml
 # }
 
-# https://github.com/github/gitignore/blob/1046d8fba6b42d367da6314c934cddb6bfe5662e/Global/Linux.gitignore {
+# <https://github.com/github/gitignore/blob/1046d8fba6b42d367da6314c934cddb6bfe5662e/Global/Linux.gitignore> {
 *~
 
 # temporary files which can be created if a process still has a handle open of a deleted file
@@ -103,7 +103,7 @@ http-client.private.env.json
 nohup.out
 # }
 
-# https://github.com/github/gitignore/blob/1046d8fba6b42d367da6314c934cddb6bfe5662e/Global/Windows.gitignore {
+# <https://github.com/github/gitignore/blob/1046d8fba6b42d367da6314c934cddb6bfe5662e/Global/Windows.gitignore> {
 # Windows thumbnail cache files
 Thumbs.db
 Thumbs.db:encryptable
@@ -130,7 +130,7 @@ $RECYCLE.BIN/
 *.lnk
 # }
 
-# https://github.com/github/gitignore/blob/1046d8fba6b42d367da6314c934cddb6bfe5662e/Global/macOS.gitignore {
+# <https://github.com/github/gitignore/blob/1046d8fba6b42d367da6314c934cddb6bfe5662e/Global/macOS.gitignore> {
 # General
 .DS_Store
 .localized
@@ -190,7 +190,7 @@ MobileBackups.trash
 tmbootpicker.efi
 # }
 
-# https://github.com/github/gitignore/blob/fc6ce5da28a8c3480cc8a5acad050449f72a9261/Scala.gitignore {
+# <https://github.com/github/gitignore/blob/fc6ce5da28a8c3480cc8a5acad050449f72a9261/Scala.gitignore> {
 *.class
 *.log
 
@@ -198,7 +198,7 @@ tmbootpicker.efi
 hs_err_pid*
 # }
 
-# custom {
+# self {
 *.DS_Store
 *.swp
 *~
